@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 
 public class MainTabActivity extends FragmentActivity{	
+	private static final String TAG="MainTabActivity";
 	private long exitTime = 0;
 	private static final int ITEM_1=Menu.FIRST;
 	//定义FragmentTabHost对象

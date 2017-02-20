@@ -7,7 +7,8 @@ import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.Size;  
   
 public class CameraUtils {  
-      
+    private static final String TAG="CameraUtils";
+
     public static final int CAMERA_FACING_BACK = 0;  
     public static final int CAMERA_FACING_FRONT = 1;  
     public static final int CAMERA_NONE = 2;  

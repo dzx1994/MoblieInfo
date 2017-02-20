@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import com.android.internal.os.PowerProfile;
 import com.sean.sysmonitor.utils.CameraUtils;
+import com.sean.sysmonitor.utils.Utils;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -27,7 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class FragmentPage2 extends Fragment{
-
+	private static final String TAG="FragmentPage2";
 	LinearLayout linearLayout1;
 
 	@Override
@@ -56,7 +57,6 @@ public class FragmentPage2 extends Fragment{
 		final FileFilter CPU_FILTER = new FileFilter(){
 			@Override
 			public boolean accept(File arg0) {
-				// TODO 自动生成的方法存根
 				String path = arg0.getName();
 				if(path.startsWith("cpu")){
 					for(int i=3; i < path.length(); i++){
@@ -196,7 +196,6 @@ public class FragmentPage2 extends Fragment{
 			ramSize = String.format("%.1f", temp);
 			br3.close();
 		} catch (IOException e) {
-			// TODO 自动生成的 catch 块
 		}
 		TextView p_ram = new TextView(getActivity());
 		p_ram.setTextColor(Color.BLACK);
@@ -278,7 +277,7 @@ public class FragmentPage2 extends Fragment{
 		WifiInfo wifiInfor = wifiMng.getConnectionInfo();
 		TextView p_mac = new TextView(getActivity());
 		p_mac.setTextColor(Color.BLACK);
-		p_mac.setText("MAC地址：" + wifiInfor.getMacAddress());
+		p_mac.setText("MAC地址：" + Utils.getMac());
 		pwTable.addView(p_mac);
 		
 		linearLayout1.addView(pwTable, margin);

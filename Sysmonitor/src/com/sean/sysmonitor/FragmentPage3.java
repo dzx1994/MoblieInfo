@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class FragmentPage3 extends Fragment{
+    private static final String TAG="FragmentPage3";
 
 	private LinearLayout mAbout;
 	private LinearLayout mMessage;
@@ -30,10 +31,9 @@ public class FragmentPage3 extends Fragment{
         mText = (LinearLayout) view1.findViewById(R.id.system);
         mText.setOnClickListener(new OnClickListener(){
 			public void onClick(View arg0) {
-				// TODO 自动生成的方法存�?
 				new AlertDialog.Builder(getActivity())
 				.setTitle("使用说明")
-				.setMessage("本简易APP可用于监测手机各部件工作状�?�，以及查询手机内部配置、网络状况等情况�?")
+				.setMessage("本简易APP可用于监测手机各部件工作状，以及查询手机内部配置、网络状况等情况")
 				.setPositiveButton("确定", null)
 				.show();
 			}
@@ -41,18 +41,16 @@ public class FragmentPage3 extends Fragment{
         mMessage = (LinearLayout) view1.findViewById(R.id.message);
 		mMessage.setOnClickListener(new OnClickListener(){
 			public void onClick(View arg0) {
-				// TODO 自动生成的方法存�?
-				Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+"18655629450"));
+				Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+"18679691164"));
 	        	startActivity(intent);
 			}
 		});
 		mAbout = (LinearLayout) view1.findViewById(R.id.about);
 		mAbout.setOnClickListener(new OnClickListener(){
 			public void onClick(View arg0) {
-				// TODO 自动生成的方法存�?
 				new AlertDialog.Builder(getActivity())
 				.setTitle("关于")
-				.setMessage("Copyright © 2011-2016 Sawatari Inc. All rights reserved.")
+				.setMessage("欢迎访问：https://github.com/dzx1994/MoblieInfo.git")
 				.setPositiveButton("确定", null)
 				.show();
 			}
@@ -60,7 +58,6 @@ public class FragmentPage3 extends Fragment{
 		exitButton = (Button)getActivity().findViewById(R.id.exitButton);
 		exitButton.setOnClickListener(new OnClickListener(){
 			public void onClick(View arg0) {
-				// TODO 自动生成的方法存�?
 				getActivity().finish();
 	            System.exit(0);
 			}

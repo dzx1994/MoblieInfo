@@ -12,6 +12,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class RoundedRectProgressBar extends View {
+    private static final String TAG="RoundedRectProgressBar";
 
     private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private int barColor;

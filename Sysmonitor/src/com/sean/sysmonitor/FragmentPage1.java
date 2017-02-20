@@ -30,7 +30,7 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 public class FragmentPage1 extends Fragment{
-
+    private static final String TAG="FragmentPage1";
 	private static ActivityManager myActivityManager; 
 	private RoundedRectProgressBar bar;
 	private ImageView needleView;  //÷∏’ÎÕº∆¨
