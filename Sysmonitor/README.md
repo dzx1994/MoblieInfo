@@ -4,9 +4,10 @@ An APP which can monitor the system and inquire hardware information.
 
 <img src='mdimage/image01.png' height='300px'/>
 <img src='mdimage/image02.png' height='300px'/>
+<img src='mdimage/image03.png' height='300px'/>
 
 ## System monitor
-(1) RAM usage
+(1) RAM 使用情况
 ```java
 public static float getUsedPercentValue(Context context) {
 	String dir = "/proc/meminfo";
@@ -26,14 +27,14 @@ public static float getUsedPercentValue(Context context) {
 	return 0;
 }
 ```
-(2) ROM usage
+(2) ROM 使用情况
 ```java
 stat = new StatFs(Environment.getExternalStorageDirectory().getPath());
 totalBlocks = stat.getBlockCount();
 availableBlocks = stat.getAvailableBlocks();
 degree4 = (int) ((totalBlocks - availableBlocks) * 100 / totalBlocks);
 ```
-(3) Battery level
+(3) 剩余电量
 ```java
 private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -50,7 +51,7 @@ private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         }
 };
 ```
-(4) CPU usage
+(4) cpu 使用情况
 ```java
 public void readUsage( ){
 	try{
@@ -71,4 +72,4 @@ public void readUsage( ){
 ```
 
 ## Hardware information
-Please read my [blog](http://blog.csdn.net/osawatari/article/details/53292769).
+Please read my [blog](seandong.com).
