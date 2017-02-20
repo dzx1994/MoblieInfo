@@ -70,6 +70,4 @@ public void readUsage( ){
 	}  
 }
 ```
-
-## Hardware information
-Please read my [blog](seandong.com).
+> **欢迎访问我的博客**：[seandong.com](seandong.com "seandong.com")
